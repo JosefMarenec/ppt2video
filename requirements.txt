@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+python-multipart
+python-pptx
+moviepy
+aiokafka
+sqlalchemy
+psycopg2-binary
+prometheus-client
+opentelemetry-sdk
+opentelemetry-instrumentation-fastapi
