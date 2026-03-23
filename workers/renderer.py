@@ -3,6 +3,8 @@ import subprocess
 def render_video(image_path, audio_path, output_path):
     cmd = [
         "ffmpeg",
+        "-y",
+        "-nostdin",
         "-loop", "1",
         "-i", image_path,
         "-i", audio_path,

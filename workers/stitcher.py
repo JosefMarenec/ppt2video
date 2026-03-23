@@ -1,15 +1,21 @@
 import subprocess
+import os
 
 def stitch_videos(video_list, output_path):
-    with open("videos.txt", "w") as f:
+    job_dir = os.path.dirname(output_path)
+    txt_path = os.path.join(job_dir, "videos.txt")
+
+    with open(txt_path, "w") as f:
         for video in video_list:
-            f.write(f"file '{video}'\n")
+            f.write(f"file '{os.path.basename(video)}'\n")
 
     subprocess.run([
         "ffmpeg",
+        "-y",
+        "-nostdin",
         "-f", "concat",
         "-safe", "0",
-        "-i", "videos.txt",
+        "-i", txt_path,
         "-c", "copy",
         output_path
     ])

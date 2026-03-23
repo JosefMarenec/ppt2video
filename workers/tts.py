@@ -1,4 +1,8 @@
+import os
+from gtts import gTTS
+
 def generate_audio(script_text, output_path):
-    # Placeholder — integrate real TTS later
-    with open(output_path, "wb") as f:
-        f.write(b"")  # dummy audio file
+    print("🎙 GENERATING REAL AUDIO:", output_path)
+    # create audio using gTTS
+    tts = gTTS(text=script_text, lang='en')
+    tts.save(output_path)

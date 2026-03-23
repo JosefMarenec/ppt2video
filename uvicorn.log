@@ -1,0 +1,204 @@
+INFO:     Started server process [35862]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+INFO:     127.0.0.1:53150 - "POST /upload HTTP/1.1" 200 OK
+ffmpeg version 8.0.1 Copyright (c) 2000-2025 the FFmpeg developers
+  built with Apple clang version 17.0.0 (clang-1700.6.3.2)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/8.0.1_1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-videotoolbox --enable-audiotoolbox --enable-neon
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+Input #0, png_pipe, from 'storage/e2bec311-fd48-4194-9cf1-c42d158e6735/slide_0.png':
+  Duration: N/A, bitrate: N/A
+  Stream #0:0: Video: png, rgb24(pc, gbr/unknown/unknown), 1280x720, 25 fps, 25 tbr, 25 tbn
+[mp3 @ 0xbe0c10280] Estimating duration from bitrate, this may be inaccurate
+Input #1, mp3, from 'storage/e2bec311-fd48-4194-9cf1-c42d158e6735/slide_0.mp3':
+  Duration: 00:00:06.91, start: 0.000000, bitrate: 64 kb/s
+  Stream #1:0: Audio: mp3 (mp3float), 24000 Hz, mono, fltp, 64 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+  Stream #1:0 -> #0:1 (mp3 (mp3float) -> aac (native))
+[libx264 @ 0xbe1071180] using cpu capabilities: ARMv8 NEON DotProd I8MM
+[libx264 @ 0xbe1071180] profile High 4:4:4 Predictive, level 3.1, 4:4:4, 8-bit
+[libx264 @ 0xbe1071180] 264 - core 165 r3222 b35605a - H.264/MPEG-4 AVC codec - Copyleft 2003-2025 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=4 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'storage/e2bec311-fd48-4194-9cf1-c42d158e6735/slide_0.mp4':
+  Metadata:
+    encoder         : Lavf62.3.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv444p(tv, progressive), 1280x720, q=2-31, 25 fps, 12800 tbn
+    Metadata:
+      encoder         : Lavc62.11.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 24000 Hz, mono, fltp, 69 kb/s
+    Metadata:
+      encoder         : Lavc62.11.100 aac
+[out#0/mp4 @ 0xbe0c180c0] video:10KiB audio:62KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 7.658416%
+frame=  172 fps=0.0 q=-1.0 Lsize=      78KiB time=00:00:06.80 bitrate=  94.0kbits/s speed=24.3x elapsed=0:00:00.28    
+[libx264 @ 0xbe1071180] frame I:1     Avg QP: 9.29  size:  2778
+[libx264 @ 0xbe1071180] frame P:43    Avg QP: 9.36  size:    48
+[libx264 @ 0xbe1071180] frame B:128   Avg QP:12.67  size:    41
+[libx264 @ 0xbe1071180] consecutive B-frames:  0.6%  0.0%  1.7% 97.7%
+[libx264 @ 0xbe1071180] mb I  I16..4:  0.3% 98.8%  0.9%
+[libx264 @ 0xbe1071180] mb P  I16..4:  0.0%  0.0%  0.0%  P16..4:  0.0%  0.0%  0.0%  0.0%  0.0%    skip:100.0%
+[libx264 @ 0xbe1071180] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.1%  0.0%  0.0%  direct: 0.0%  skip:99.9%  L0:69.8% L1:30.2% BI: 0.0%
+[libx264 @ 0xbe1071180] 8x8 transform intra:98.8% inter:0.0%
+[libx264 @ 0xbe1071180] coded y,u,v intra: 0.4% 0.4% 0.3% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0xbe1071180] i16 v,h,dc,p: 82%  9%  9%  0%
+[libx264 @ 0xbe1071180] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 40% 13% 46%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0xbe1071180] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 20% 18% 49%  1%  1%  3%  1%  2%  4%
+[libx264 @ 0xbe1071180] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0xbe1071180] ref P L0: 65.0% 25.0% 10.0%
+[libx264 @ 0xbe1071180] ref B L0: 40.8% 59.2%
+[libx264 @ 0xbe1071180] kb/s:11.68
+[aac @ 0xbe1073b80] Qavg: 1114.962
+ffmpeg version 8.0.1 Copyright (c) 2000-2025 the FFmpeg developers
+  built with Apple clang version 17.0.0 (clang-1700.6.3.2)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/8.0.1_1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-videotoolbox --enable-audiotoolbox --enable-neon
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+Input #0, png_pipe, from 'storage/e2bec311-fd48-4194-9cf1-c42d158e6735/slide_1.png':
+  Duration: N/A, bitrate: N/A
+  Stream #0:0: Video: png, rgb24(pc, gbr/unknown/unknown), 1280x720, 25 fps, 25 tbr, 25 tbn
+[mp3 @ 0x8f2c10280] Estimating duration from bitrate, this may be inaccurate
+Input #1, mp3, from 'storage/e2bec311-fd48-4194-9cf1-c42d158e6735/slide_1.mp3':
+  Duration: 00:00:07.37, start: 0.000000, bitrate: 64 kb/s
+  Stream #1:0: Audio: mp3 (mp3float), 24000 Hz, mono, fltp, 64 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+  Stream #1:0 -> #0:1 (mp3 (mp3float) -> aac (native))
+[libx264 @ 0x8f3051180] using cpu capabilities: ARMv8 NEON DotProd I8MM
+[libx264 @ 0x8f3051180] profile High 4:4:4 Predictive, level 3.1, 4:4:4, 8-bit
+[libx264 @ 0x8f3051180] 264 - core 165 r3222 b35605a - H.264/MPEG-4 AVC codec - Copyleft 2003-2025 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=4 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'storage/e2bec311-fd48-4194-9cf1-c42d158e6735/slide_1.mp4':
+  Metadata:
+    encoder         : Lavf62.3.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv444p(tv, progressive), 1280x720, q=2-31, 25 fps, 12800 tbn
+    Metadata:
+      encoder         : Lavc62.11.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 24000 Hz, mono, fltp, 69 kb/s
+    Metadata:
+      encoder         : Lavc62.11.100 aac
+[out#0/mp4 @ 0x8f2c380c0] video:11KiB audio:66KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 7.585290%
+frame=  184 fps=0.0 q=-1.0 Lsize=      83KiB time=00:00:07.28 bitrate=  93.4kbits/s speed=  26x elapsed=0:00:00.27    
+[libx264 @ 0x8f3051180] frame I:1     Avg QP: 9.31  size:  2952
+[libx264 @ 0x8f3051180] frame P:46    Avg QP: 9.51  size:    48
+[libx264 @ 0x8f3051180] frame B:137   Avg QP:12.67  size:    38
+[libx264 @ 0x8f3051180] consecutive B-frames:  0.5%  0.0%  1.6% 97.8%
+[libx264 @ 0x8f3051180] mb I  I16..4:  0.3% 99.1%  0.7%
+[libx264 @ 0x8f3051180] mb P  I16..4:  0.0%  0.0%  0.0%  P16..4:  0.0%  0.0%  0.0%  0.0%  0.0%    skip:100.0%
+[libx264 @ 0x8f3051180] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.0%  0.0%  0.0%  direct: 0.0%  skip:100.0%  L0: 0.0% L1:100.0% BI: 0.0%
+[libx264 @ 0x8f3051180] 8x8 transform intra:99.1% inter:14.3%
+[libx264 @ 0x8f3051180] coded y,u,v intra: 0.5% 0.4% 0.3% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x8f3051180] i16 v,h,dc,p: 40% 50% 10%  0%
+[libx264 @ 0x8f3051180] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 38% 11% 51%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x8f3051180] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 16%  3% 76%  0%  0%  1%  1%  1%  2%
+[libx264 @ 0x8f3051180] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x8f3051180] ref P L0: 81.2%  6.2%  0.0% 12.5%
+[libx264 @ 0x8f3051180] kb/s:11.21
+[aac @ 0x8f3053b80] Qavg: 707.541
+ffmpeg version 8.0.1 Copyright (c) 2000-2025 the FFmpeg developers
+  built with Apple clang version 17.0.0 (clang-1700.6.3.2)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/8.0.1_1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-videotoolbox --enable-audiotoolbox --enable-neon
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+Input #0, png_pipe, from 'storage/e2bec311-fd48-4194-9cf1-c42d158e6735/slide_2.png':
+  Duration: N/A, bitrate: N/A
+  Stream #0:0: Video: png, rgb24(pc, gbr/unknown/unknown), 1280x720, 25 fps, 25 tbr, 25 tbn
+[mp3 @ 0x86cc10280] Estimating duration from bitrate, this may be inaccurate
+Input #1, mp3, from 'storage/e2bec311-fd48-4194-9cf1-c42d158e6735/slide_2.mp3':
+  Duration: 00:00:08.93, start: 0.000000, bitrate: 64 kb/s
+  Stream #1:0: Audio: mp3 (mp3float), 24000 Hz, mono, fltp, 64 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+  Stream #1:0 -> #0:1 (mp3 (mp3float) -> aac (native))
+[libx264 @ 0x86d051180] using cpu capabilities: ARMv8 NEON DotProd I8MM
+[libx264 @ 0x86d051180] profile High 4:4:4 Predictive, level 3.1, 4:4:4, 8-bit
+[libx264 @ 0x86d051180] 264 - core 165 r3222 b35605a - H.264/MPEG-4 AVC codec - Copyleft 2003-2025 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=4 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'storage/e2bec311-fd48-4194-9cf1-c42d158e6735/slide_2.mp4':
+  Metadata:
+    encoder         : Lavf62.3.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv444p(tv, progressive), 1280x720, q=2-31, 25 fps, 12800 tbn
+    Metadata:
+      encoder         : Lavc62.11.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 24000 Hz, mono, fltp, 69 kb/s
+    Metadata:
+      encoder         : Lavc62.11.100 aac
+[out#0/mp4 @ 0x86cc380c0] video:12KiB audio:79KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 7.453496%
+frame=  223 fps=0.0 q=-1.0 Lsize=      98KiB time=00:00:08.84 bitrate=  90.8kbits/s speed=23.3x elapsed=0:00:00.37    
+[libx264 @ 0x86d051180] frame I:1     Avg QP: 9.33  size:  2985
+[libx264 @ 0x86d051180] frame P:56    Avg QP: 9.46  size:    47
+[libx264 @ 0x86d051180] frame B:166   Avg QP:12.67  size:    38
+[libx264 @ 0x86d051180] consecutive B-frames:  0.4%  0.9%  0.0% 98.7%
+[libx264 @ 0x86d051180] mb I  I16..4:  0.3% 98.8%  0.9%
+[libx264 @ 0x86d051180] mb P  I16..4:  0.0%  0.0%  0.0%  P16..4:  0.0%  0.0%  0.0%  0.0%  0.0%    skip:100.0%
+[libx264 @ 0x86d051180] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.0%  0.0%  0.0%  direct: 0.0%  skip:100.0%  L0: 0.0% L1:100.0% BI: 0.0%
+[libx264 @ 0x86d051180] 8x8 transform intra:98.8% inter:33.3%
+[libx264 @ 0x86d051180] coded y,u,v intra: 0.5% 0.5% 0.4% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x86d051180] i16 v,h,dc,p: 60% 30% 10%  0%
+[libx264 @ 0x86d051180] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu:  0% 51% 49%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x86d051180] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 10% 15% 64%  1%  0%  3%  3%  2%  2%
+[libx264 @ 0x86d051180] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x86d051180] ref P L0: 33.3%  0.0% 50.0% 16.7%
+[libx264 @ 0x86d051180] kb/s:10.63
+[aac @ 0x86d053b80] Qavg: 902.216
+ffmpeg version 8.0.1 Copyright (c) 2000-2025 the FFmpeg developers
+  built with Apple clang version 17.0.0 (clang-1700.6.3.2)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/8.0.1_1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-videotoolbox --enable-audiotoolbox --enable-neon
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xa60c18280] Auto-inserting h264_mp4toannexb bitstream filter
+Input #0, concat, from 'storage/e2bec311-fd48-4194-9cf1-c42d158e6735/videos.txt':
+  Duration: N/A, start: -0.042667, bitrate: 85 kb/s
+  Stream #0:0(und): Video: h264 (High 4:4:4 Predictive) (avc1 / 0x31637661), yuv444p(progressive), 1280x720, 12 kb/s, 25 fps, 25 tbr, 12800 tbn
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc62.11.100 libx264
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 24000 Hz, mono, fltp, 73 kb/s, start -0.042667
+    Metadata:
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+  Stream #0:1 -> #0:1 (copy)
+Output #0, mp4, to 'storage/e2bec311-fd48-4194-9cf1-c42d158e6735/final.mp4':
+  Metadata:
+    encoder         : Lavf62.3.100
+  Stream #0:0(und): Video: h264 (High 4:4:4 Predictive) (avc1 / 0x31637661), yuv444p(progressive), 1280x720, q=2-31, 12 kb/s, 25 fps, 25 tbr, 12800 tbn
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc62.11.100 libx264
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 24000 Hz, mono, fltp, 73 kb/s
+    Metadata:
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xa60c18280] Auto-inserting h264_mp4toannexb bitstream filter
+    Last message repeated 1 times
+[aost#0:1/copy @ 0xa60c2c000] Non-monotonic DTS; previous: 343040, current: 342720; changing to 343041. This may result in incorrect timestamps in the output file.
+[out#0/mp4 @ 0xa60c28900] video:34KiB audio:207KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 6.450488%
+frame=  579 fps=0.0 q=-1.0 Lsize=     256KiB time=00:00:23.16 bitrate=  90.7kbits/s speed=4.11e+03x elapsed=0:00:00.00    
